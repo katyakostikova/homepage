@@ -261,3 +261,14 @@ body {
 .additional-info__languages-item {
   color: var(--secondary-text-color);
 }
+
+.hobbies__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hobbies__item-image {
+  width: 35px;
+  margin: 3px;
+}
