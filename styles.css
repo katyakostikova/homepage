@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #100f17;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 
-  --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --primary-text-color: #0dbba0;
+  --secondary-text-color: #e3e3e4;
+  --durability-text-color: #0dbba1a1;
+  --icon-color: #0dbba0;
+  --border-color: #ca7057;
+  --text-decoration-color: #ca7057;
 }
 
 .container {
@@ -28,24 +29,32 @@ body {
   justify-content: space-between;
 }
 
-.fv {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .resume {
   margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  border: 1px solid #0dbba170;
+  box-shadow: 1px 1px 7px 7px #0dbba170;
   padding: 30px 0;
   max-width: 900px;
 }
 
 .resume__block {
   border-bottom: 3px solid var(--border-color);
-  padding-bottom: 30px;
-  margin-bottom: 15px;
+}
+
+.resume__block.contacts {
+  padding-bottom: 20px;
+}
+
+.resume__block.skills {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.resume__block.education {
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -74,7 +83,7 @@ body {
   }
 
   .contact-info__header {
-      color: var(--primary-text-color);
+      color: var(--secondary-text-color);
       margin-bottom: 15px;
       text-decoration-color: var(--text-decoration-color);
       text-decoration-line: underline;
@@ -93,6 +102,7 @@ body {
 
   .contact-info__block--center {
       justify-content: center;
+      margin-right: 100px;
   }
 
   .contact-info__item {
@@ -107,6 +117,7 @@ body {
   }
 
   .contact-info__item-icon-wrapper {
+      color: var(--icon-color);
       margin-right: 10px;
       width: 20px;
       display: flex;
@@ -155,28 +166,30 @@ body {
 .intro_text {
     color: var(--secondary-text-color);
     text-align: justify;
+    padding: 20px 0px;
 }
 
 .skills__header {
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     text-align: center;
     margin-bottom: 15px;
+    font-size: x-large;
 }
 
 .skills__text {
     color: var(--secondary-text-color);
-    text-align: justify;
+    text-align: center;
 }
 
 .experiences {
   flex: 1 1 60%;
-  margin-right: 50px;
 }
 
 .experiences__header {
   color: var(--secondary-text-color);
   text-align: left;
   margin-bottom: 20px;
+  font-size: x-large;
 }
 
 .experiences__company-header-durability {
@@ -217,6 +230,7 @@ body {
   padding-left: 20px;
 }
 
+
 .additional-info {
   flex: 1 1 40%;
 }
@@ -226,9 +240,21 @@ body {
 }
 
 .additional-info__education-header {
-  color: var(--secondary-text-color);
-  text-align: left;
+  color: var(--primary-text-color);
+  text-align: center;
   margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.additional-info__education-university {
+  margin: 50px 0px;
+  text-align: center;
+}
+
+.additional-info__education-university.last {
+  margin: 50px 0px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .additional-info__education-university-durability {
@@ -239,8 +265,8 @@ body {
 }
 
 .additional-info__education-university-speciality {
-  color: var(--primary-text-color);
-  text-align: left;
+  color: var(--secondary-text-color);
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -250,12 +276,22 @@ body {
 
 .additional-info__languages {
   margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.additional-info__languages.last {
+  border-bottom: 0px;
+  padding-top: 0px;
 }
 
 .additional-info__languages-header {
-  color: var(--secondary-text-color);
-  text-align: left;
+  color: var(--primary-text-color);
+  text-align: center;
   margin-bottom: 20px;
+  font-size: x-large;
 }
 
 .additional-info__languages-item {
@@ -266,9 +302,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
 }
 
 .hobbies__item-image {
   width: 35px;
-  margin: 3px;
+  margin: 5px;
+  color: var(--border-color);
 }
